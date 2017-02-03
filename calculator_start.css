@@ -1,0 +1,24 @@
+#table {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.h1 {
+    text-align: center;
+    font-size: 65px;
+    color: black;
+}
+
+.textBox {
+    float: center;
+    width: 350px;
+    height: 50px;
+    font-size: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wrapper {
+    text-align: center;
+    height: 50%;
+}
