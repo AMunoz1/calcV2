@@ -5,6 +5,7 @@ QUnit.test("Add digits test", function (assert) {
     assert.equal(document.getElementById("screen").value, "12", "Passed - Expected 12");
     allClear();
 });
+
 QUnit.test("Add digits test", function (assert) {
     addDigit('1');
     addDigit('2');
@@ -18,11 +19,13 @@ QUnit.test("Add decimal test", function (assert) {
     assert.equal(document.getElementById("screen").value, "0.2", "Passed - Expected 0.2");
     allClear();
 });
+
 QUnit.test("Change sign test", function (assert) {
     addDigit('2');
     changeSign();
     assert.equal(document.getElementById("screen").value, "-2", "Passed - Expected -2");
     allClear();
+});
 
 QUnit.test("Change to Percentage test", function(assert) {
     addDigit('2');
