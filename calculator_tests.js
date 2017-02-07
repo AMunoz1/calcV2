@@ -5,6 +5,52 @@ QUnit.test("Add digits test", function (assert) {
     assert.equal(document.getElementById("screen").value, "12", "Passed - Expected 12");
     allClear();
 });
+QUnit.test("Add digits test", function (assert) {
+    addDigit('1');
+    addDigit('2');
+    assert.equal(document.getElementById("screen").value, "12", "Passed - Expected 12");
+    allClear();
+});
+QUnit.test("Add decimal test", function (assert) {
+    addDecimal();
+    addDigit('2');
+    addDecimal();
+    assert.equal(document.getElementById("screen").value, "0.2", "Passed - Expected 0.2");
+    allClear();
+});
+QUnit.test("Change sign test", function (assert) {
+    addDigit('2');
+    changeSign();
+    assert.equal(document.getElementById("screen").value, "-2", "Passed - Expected -2");
+    allClear();
+
+QUnit.test("Change to Percentage test", function(assert) {
+    addDigit('2');
+    percentage();
+    assert.equal(document.getElementById("screen").value, "0.02", "Passed - Expected 0.02");
+    allClear();
+});
+QUnit.test("factorial test", function(assert) {
+    addDigit('5');
+    factorial();
+    assert.equal(document.getElementById("screen").value, "120", "Passed - Expected 120");
+    allClear();
+});
+QUnit.test("calculate square", function(assert) {
+    addDigit('3');
+    square();
+    assert.equal(document.getElementById("screen").value, "9", "Passed - Expected 9");
+    allClear();
+});
+QUnit.test("Divide by 0 Error", function(assert) {
+    addDigit('5');
+    storeOperator('/');
+    addDigit('0');
+    calculate();
+    assert.equal(document.getElementById("screen").value, "ERROR", "Passed - Expected ERROR");
+    allClear();
+});
+
 // Test adding one, then two decimals
 QUnit.test("Add decimal test", function (assert) {
     addDecimal();
